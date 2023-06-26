@@ -1,0 +1,68 @@
+
+# szablon klasy
+class Car:
+    # definiując klasę w pythonie należy zdefiniować funkcje __init__() 1 parametrem jest self czyli właśnie ten konkretny obiekt który powstanie. Następnie
+    # trzeba określić atrybuty jakie każda z instacji powinna posiadać. self to właśnie inicjowany obiekt.
+    def __init__(self, brand, model, isAirBagOk, isPaintingOk, isMachanicOk):
+        # self.dany argument = chodzi o właściwość w tym momencie instancji, a po prawej stronie nie poprzedzony self oznacza podany argument
+        self.brand = brand
+        self.model = model
+        self.isAirBagOk = isAirBagOk
+        self.isPaintingOk = isPaintingOk
+        self.isMachanicOk = isMachanicOk
+
+# tworzenie instacji. do zmiennej przypisuje nazwę klasy i w () wprowadzam wartości zmiennych
+car_01 = Car('Seat','Ibiza', True, True, True)
+car_02 = Car('Opel','Corsa', True, False, True)
+
+# odwołanie do instacji, nazwa instancji  "nazwa obiektu " i po kropce odwołać się do jednej z istniejących atrybutów klasy " zmiennych "
+print(car_01.brand, car_01.model, car_01.isAirBagOk, car_01.isPaintingOk,car_01.isMachanicOk)
+print(car_02.brand, car_02.model, car_02.isAirBagOk, car_02.isPaintingOk,car_02.isMachanicOk)
+
+
+
+
+'''
+car_01 = {
+'carBrand' : 'Seat',
+'carModel' : 'Ibiza',
+'carIsAirBagOk' : True,
+'carIsPaintingOk' : True,
+'carIsMachanicOK' : True
+}
+
+car_02 = {
+'carBrand' : 'Opel',
+'carModel' : 'Corsa',
+'carIsAirBagOk' : True,
+'carIsPaintingOk' : False,
+'carIsMachanicOK' : True
+}
+
+def IsCarDamaged(aCar):
+    return not (aCar['carIsAirBagOk'] and aCar['carIsPaintingOk'] and aCar['carIsMachanicOK'])
+
+print(IsCarDamaged(car_01))
+print(IsCarDamaged(car_02))
+
+
+cars = [car_01, car_02]
+
+for c in cars:
+    print('{} {} damaged = {}'.format(c['carBrand'],c['carModel'],IsCarDamaged(c)))
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
